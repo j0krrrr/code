@@ -9,4 +9,4 @@ def permut(string):
 		for t in z:
 			perm_list.append([a]+t)
 	return perm_list
-print(permut('abcd'))
+print(permut('abcdef'))
