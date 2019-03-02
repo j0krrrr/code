@@ -1,0 +1,11 @@
+import re
+txt=' abc213'
+txt1='sabs123s'
+def stripX(string,c):
+	
+strX=re.compile(r'(^\s|\s$)')
+strX1=re.compile(r'(^s|s$)')
+out=strX.sub(r'',txt)
+print out
+out=strX1.sub(r'',txt1)
+print out

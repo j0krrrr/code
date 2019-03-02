@@ -1,0 +1,28 @@
+import shutil, os, re
+dPattern=re.compile(r"""
+	^(.*?)
+	((0|1)?\d)-
+	((0|1|2|3)?\d)-
+	((19|20)?\d\d)
+	(.*?)$""",re.VERBOSE)
+for aFile in os.listdir('.'):
+	mo=dPattern.search(aFile)
+	if mo==None:
+		continue
+	bPart=mo.group(1)
+	mPart=mo.group(2)
+	dPart=mo.group(4)
+	yPart=mo.group(6)
+	aPart=mo.group(8)
+	
+	eFile=bPart+dPart+'-'+mPart+'-'+yPart+aPart
+	
+	absWorkDir=os.path.abspath('.')
+	aFile=os.path.join(absWorkDir,aFile)
+	eFile=os.path.join(absWorkDir,eFile)
+
+	print(aFile+' will be renamed as '+eFile)
+	#shutil.move(aFile,eFile)
+
+
+

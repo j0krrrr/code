@@ -1,0 +1,4 @@
+spam=['apps','bans','tofu','cats']
+for i in range(0,len(spam)-1):
+ print(spam[i]+', ',end='')
+print('and '+spam[-1])

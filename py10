@@ -1,0 +1,14 @@
+PASS={'email':'asdqweasdqweasdqwe',
+      'blog':'wretwtrsrgsgtretr',
+      'luggage':'fgrtretetergterg'}
+import sys,pyperclip
+if len(sys.argv) < 2:
+ print('Usage: python pw.py [account] - copy account pass')
+ sys.exit()
+account=sys.argv[1]
+if account in PASS:
+ pyperclip.copy(PASS[account])
+ print(PASS[account])
+else:
+ print('No account:'+account)
+ 

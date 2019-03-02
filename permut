@@ -1,0 +1,4 @@
+import itertools
+s=raw_input()
+permut=["".join(x) for x in itertools.permutations(s)]
+print(sorted(permut)[len(s)/2])

@@ -1,0 +1,16 @@
+allGuests = {'Alice': {'apples': 5, 'pretzels': 12},
+             'Bob': {'ham sandwiches': 3, 'apple pies': 2},
+             'Carol': {'cups': 3, 'apple pies': 1}}
+bag=['apples','cups','apples','cake']
+num={}
+tot=0
+for k,v in allGuests.items():
+ for i in v.keys():
+  num[i]=num.get(i,0)+v.get(i,0)
+print num
+for i in num.values():
+ tot+=i
+print tot
+for i in bag:
+ num[i]=num.get(i,0)+1
+print num

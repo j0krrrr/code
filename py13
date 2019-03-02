@@ -1,0 +1,9 @@
+import re
+strlenX=re.compile(r'.{8,}')
+strAX=re.compile(r'[A-Z]')
+straX=re.compile(r'[a-z]')
+strDX=re.compile(r'\d')
+passi=['abc','abcdefgh','12345678','abc123','abAB123','abcABC12']
+for i in passi:
+	if (strlenX.search(i) and strAX.search(i) and straX.search(i) and strDX.search(i)):
+		print(i+' pass')

@@ -1,0 +1,17 @@
+def collatz(input):
+ try:
+  if input % 2 == 0:
+   return input // 2
+  else:
+   return 3 * input + 1
+ except ValueError:
+  return 'Error'
+input=input('Enter any number')
+out=collatz(input)
+print out
+while out !=1:
+ out=collatz(out)
+ print out
+  
+  
+
